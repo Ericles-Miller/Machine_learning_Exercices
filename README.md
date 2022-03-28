@@ -10,7 +10,7 @@ melbourne_data = pd.read_csv(melbourne_file_path)
 melbourne_data.columns
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/7a67e23a-d6a5-439d-90cc-8b40144b8ac3/Untitled.png)
+![4](https://user-images.githubusercontent.com/59926475/160414749-8c391d61-b669-4817-80ae-c8916146c6b1.png)
 
 ```python
 # Os dados de Melbourne têm alguns valores ausentes (algumas
@@ -110,7 +110,7 @@ print(melbourne_model.predict(X.head()))
 #dados de treino 
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/912cdabb-13cf-4e42-9e09-a8802be8be45/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/59926475/160415549-06d6e547-53c2-48d2-9b6a-a5bf086dd507.png)
 
 # ****Model Validation****
 
@@ -212,7 +212,9 @@ Há muitas maneiras de melhorar esse modelo, como experimentar para encontrar re
 Agora que você tem uma maneira confiável de medir a precisão do modelo, pode experimentar modelos alternativos e ver qual fornece as melhores previsões. Mas quais alternativas você tem para os modelos?
 Você pode ver na documentação do scikit-learn que o modelo de árvore de decisão tem muitas opções (mais do que você deseja ou precisa por um longo tempo). **As opções mais importantes determinam a profundidade da árvore. Lembre-se da primeira lição deste curso que a profundidade de uma árvore é uma medida de quantas divisões ela faz antes de chegar a uma previsão. Esta é uma árvore relativamente rasa**
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/1f3fd987-a0ab-4582-86ca-8b40f7119c5c/Untitled.png)
+![5](https://user-images.githubusercontent.com/59926475/160414776-7e3da187-0e24-4a87-9ae4-ff2e73a07689.png)
+
+
 
 **Na prática, não é incomum que uma árvore tenha 10 divisões entre o nível superior** (todas as casas) e uma folha. À medida que a árvore se aprofunda, o conjunto de dados é dividido em folhas com menos casas. Se uma árvore teve apenas 1 divisão, ela divide os dados em 2 grupos. Se cada grupo for dividido novamente, obteremos 4 grupos de casas. Dividir cada um deles novamente criaria 8 grupos. Se continuarmos dobrando o número de grupos adicionando mais divisões em cada nível, teremos 210 grupos de casas quando chegarmos ao 10º nível. São 1024 folhas.
 
@@ -224,7 +226,8 @@ Em um extremo, se uma árvore divide as casas em apenas 2 ou 4, cada grupo ainda
 
 Como nos preocupamos com a precisão em novos dados, que estimamos a partir de nossos dados de validação, queremos encontrar o ponto ideal entre underfitting e overfitting. Visualmente, queremos o ponto baixo da curva de validação (vermelha) na figura abaixo.
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/459ca536-9a76-49ef-9d3b-0ec3e3bfbe3b/Untitled.png)
+![6](https://user-images.githubusercontent.com/59926475/160414779-307d92c7-ad9c-4cce-bc01-a81439ee97b8.png)
+
 
 # Exemplo
 
@@ -282,7 +285,7 @@ for max_leaf_nodes in [5, 50, 500, 5000]:
     print("Max leaf nodes: %d  \t\t Mean Absolute Error:  %d" %(max_leaf_nodes, my_mae))
 ```
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/c5f4815a-ee53-49eb-98d0-098e822a38c7/Untitled.png)
+![7](https://user-images.githubusercontent.com/59926475/160414782-d9e14575-b4c3-4e00-b341-23f8ed943e1a.png)
 
 ## Conclusão
 
