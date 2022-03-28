@@ -101,6 +101,17 @@ Agora temos um modelo ajustado que podemos usar para fazer previsões.
 
 Na prática, você desejará fazer previsões para novas casas no mercado, em vez das casas para as quais já temos preços. Mas faremos previsões para as primeiras linhas dos dados de treinamento para ver como a função de previsão funciona.
 
+```python
+print("Making predictions for the following 5 houses:")
+print(X.head())
+print("The predictions are")
+print(melbourne_model.predict(X.head()))
+
+#dados de treino 
+```
+
+![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/912cdabb-13cf-4e42-9e09-a8802be8be45/Untitled.png)
+
 # ****Model Validation****
 
 **Você construiu um modelo. Mas quão bom é?
